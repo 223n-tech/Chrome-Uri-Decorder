@@ -14,11 +14,17 @@
 </head>
 
 <body>
-  <button id="copyButton">COPY</button>
-  <span id="urlContainer"></span>
-  <br>
-  <button id="copyDecButton" style="display: none;">COPY</button>
+  <span id="titleContainer"></span><br />
+  <button id="copyTitleButton">COPY(Title)</button>
+  <hr />
+  <span id="urlContainer"></span><br />
+  <button id="copyUrlButton">COPY(URL)</button>
+  <button id="copyTitleAndUrlButton">COPY(URL&plus;Title)</button>
+  <br />
+  <hr id="decHr" />
   <span id="urlDecContainer" style="display: none;"></span>
+  <button id="copyDecUrlButton" style="display: none;">COPY(URL)</button>
+  <button id="copyTitleAndDecUrlButton" style="display: none;">COPY(URL&plus;Title)</button>
   <div id="status"></div>
   <script src="popup.js"></script>
 </body>
