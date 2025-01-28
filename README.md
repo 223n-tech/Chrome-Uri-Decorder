@@ -1,6 +1,6 @@
 # Chrome URI Decorder
 
-![ScreenShot1]("URI Decoder image01.png")
+![ScreenShot](https://raw.githubusercontent.com/223n-tech/Chrome-Uri-Decorder/refs/heads/develop/URI%20Decoder%20image01.png)
 
 ## なにをするもの？
 
