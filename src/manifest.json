@@ -1,26 +1,26 @@
 {
     "manifest_version": 3,
     "name": "URI Decoder - BETA",
-    "version": "1.0",
+    "version": "1.1",
     "description": "URI Decoder. THIS EXTENSION IS FOR BETA TESTING",
     "permissions": [
       "activeTab"
     ],
     "action": {
       "default_popup": "popup.html",
-      "default_icon": "icon_48.png"
+      "default_icon": "img/icon_48.png"
     },
     "icons": {
-      "16": "icon_16.png",
-      "48": "icon_48.png",
-      "128": "icon_128.png"
+      "16": "img/icon_16.png",
+      "48": "img/icon_48.png",
+      "128": "img/icon_128.png"
     },
     "web_accessible_resources": [
       {
         "resources": [
-          "icon_16.png",
-          "icon_48.png",
-          "icon_128.png"
+          "img/icon_16.png",
+          "img/icon_48.png",
+          "img/icon_128.png"
         ],
         "matches": [
           "<all_urls>"
