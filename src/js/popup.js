@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (currentTab.url === decodedUrl) {
         document.getElementById("decHr").style.border = "none";
       } else {
+        document.getElementById("decH3").style.display = "inline";
         document.getElementById("urlDecContainer").style.display = "inline";
         document.getElementById("urlDecContainer").innerText = decodedUrl;
         document.getElementById("copyDecUrlButton").style.display = "inline";
