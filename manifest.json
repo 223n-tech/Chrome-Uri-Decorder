@@ -1,8 +1,8 @@
 {
     "manifest_version": 3,
-    "name": "URI Decoder",
+    "name": "URI Decoder - BETA",
     "version": "1.0",
-    "description": "URI Decoder.",
+    "description": "URI Decoder. THIS EXTENSION IS FOR BETA TESTING",
     "permissions": [
       "activeTab"
     ],
