@@ -1,35 +1,91 @@
 <!DOCTYPE html>
-<html lang="ja">
-
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>URL Decode</title>
-  <style>
-    body {
-      width: 500px;
-      word-wrap: break-word;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>XML Url Linker</title>
+    <style>
+        body {
+            width: 300px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 10px;
+        }
+
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            position: relative;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        button:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+
+        .loading-spinner {
+            display: none;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255,255,255,0.3);
+            border-radius: 50%;
+            border-top-color: #ffffff;
+            animation: spin 1s linear infinite;
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        button.loading .loading-spinner {
+            display: block;
+        }
+
+        button.loading .button-text {
+            margin-left: 30px;
+        }
+
+        @keyframes spin {
+            0% { transform: translateY(-50%) rotate(0deg); }
+            100% { transform: translateY(-50%) rotate(360deg); }
+        }
+
+        .options-container {
+            margin-bottom: 10px;
+        }
+
+        #error-message {
+            color: #dc3545;
+            background-color: #f8d7da;
+            padding: 10px;
+            border-radius: 4px;
+            margin-top: 10px;
+            display: none;
+        }
+    </style>
 </head>
-
 <body>
-  <span><b>TITLE</b></span><br />
-  <span id="titleContainer"></span><br />
-  <button id="copyTitleButton">COPY(Title)</button>
-  <hr />
-  <span><b>URL</b></span><br />
-  <span id="urlContainer"></span><br />
-  <button id="copyUrlButton">COPY(URL)</button>
-  <button id="copyTitleAndUrlButton">COPY(URL&plus;Title)</button>
-  <br />
-  <hr id="decHr" />
-  <span id="decH3" style="display: none;"><b>URL(Decorde)</b></span><br />
-  <span id="urlDecContainer" style="display: none;"></span><br />
-  <button id="copyDecUrlButton" style="display: none;">COPY(URL)</button>
-  <button id="copyTitleAndDecUrlButton" style="display: none;">COPY(URL&plus;Title)</button>
-  <div id="status"></div>
-  <script src="js/popup.js"></script>
+    <div class="button-container">
+        <button id="generate-linked-xml">
+            <div class="loading-spinner"></div>
+            <span class="button-text">リンク付きXMLページを生成</span>
+        </button>
+    </div>
+    <div id="error-message"></div>
+    <script src="js/popup.js"></script>
 </body>
-
 </html>
